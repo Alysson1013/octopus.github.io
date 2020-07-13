@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: StatsBold;
+    src: url(fonts/StatsGroup-Bold.otf);
+}
+
+@font-face {
+    font-family: StatsRegular;
+    src: url(fonts/Stats-Regular.otf);
+}
+
+.logo {
+    width: 25vw;
+    margin: auto;
+    margin-top: 15%;
+}
+
+.logo svg {
+    width: 100%;
+}
+
+.tela1 {
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+.tela1 h1 {
+    margin-top: 10%;
+    text-align: justify;
+    font-size: 3.95vw;
+    font-family: StatsBold;
+    color: #0F1028;
+}
+
+.tela1 h3 {
+    font-size: 3.5vw;
+    font-family: StatsBold;
+    color: #0F1028;
+    margin-top: 8%;
+}
+
+.tela1 textarea {
+    font-size: 3vw;
+    font-family: StatsRegular;
+    margin-top: 1%;
+    width: 100%;
+    height: 10vw;
+    padding-left: 3vw;
+    padding-top: 3vw;
+    border: 2px solid #8C8D92;
+    color: #8C8D92;
+    border-radius: 5px;
+    outline: none;
+}
+
+.tela1 select {
+    font-size: 3vw;
+    font-family: StatsRegular;
+    margin-top: 1%;
+    width: 100%;
+    height: 10vw;
+    padding: 3vw;
+    border: 2px solid #8C8D92;
+    color: #8C8D92;
+    border-radius: 5px;
+    outline: none;
+}
+
+.calcular {
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 4.3vw;
+    color: #ffffff;
+    width: 100%;
+    height: 15vw;
+    margin-top: 10%;
+    border-radius: 100vh;
+    transition-duration: 0.4s;
+}
+
+.calcular:hover {
+    background-color: #1caf77;
+    transition-duration: 0.4s;
+}
+
+.tela2 {
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+.tela2 h1 {
+    margin-top: 10%;
+    text-align: justify;
+    font-size: 4.2vw;
+    font-family: StatsBold;
+    color: #0F1028;
+}
+
+.tela2 h5 {
+    float: left;
+    margin-top: 10%;
+    font-size: 6.68vw;
+    font-family: StatsBold;
+    color: #0F1028;
+    margin-left: 5vw;
+
+}
+
+.tela2 #res1,
+#res2,
+#res3,
+#res4 {
+    float: right;
+    font-size: 6.68vw;
+    font-family: StatsBold;
+    color: #00E48B;
+    text-align: center;
+}
+
+.finalizar {
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 4.3vw;
+    color: #ffffff;
+    width: 100%;
+    height: 15vw;
+    margin-top: 10%;
+    border-radius: 100vh;
+    transition-duration: 0.4s;
+}
+
+.finalizar:hover {
+    background-color: #1caf77;
+    transition-duration: 0.4s;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        width: 20vw;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .logo svg {
+        width: 100%;
+    }
+
+    .tela1 {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .tela1 h1 {
+        margin-top: 10%;
+        text-align: justify;
+        font-size: 3.6vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela1 h3 {
+        font-size: 2.5vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 10%;
+    }
+
+    .tela1 textarea {
+        font-size: 2.5vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 7vw;
+        padding: 0px;
+        padding-left: 10px;
+        padding-top: 10px;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .tela1 select {
+        font-size: 2.5vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 7vw;
+        padding: 0px;
+        padding-left: 10px;
+        padding-top: 1px;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .calcular {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #ffffff;
+        width: 100%;
+        height: 10vw;
+        margin-top: 10%;
+        border-radius: 100vh;
+    }
+
+    .tela2 {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .tela2 h1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+        text-align: justify;
+        font-size: 3.6vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela2 h5 {
+        margin-top: 10%;
+        font-size: 6.2vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela2 #res1,
+    #res2,
+    #res3,
+    #res4 {
+        display: inline;
+        font-size: 6.2vw;
+        font-family: StatsBold;
+        color: #00E48B;
+    }
+
+    .finalizar {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #ffffff;
+        width: 100%;
+        height: 10vw;
+        margin-top: 10%;
+        border-radius: 100vh;
+    }
+}
+
+@media (min-width: 1361px) {
+    .logo {
+        width: 10vw;
+        margin: auto;
+        margin-top: 4%;
+    }
+
+    .logo svg {
+        width: 100%;
+    }
+
+    .tela1 {
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+
+    .tela1 h1 {
+        margin-top: 3%;
+        text-align: justify;
+        font-family: StatsBold;
+        font-size: 2vw;
+        color: #101028;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tela1 h3 {
+        font-size: 1.5vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 5%;
+    }
+
+    #entrada {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+
+    .tela1 textarea {
+        font-size: 1.3vw;
+        padding-top: 10px;
+        padding-left: 10px;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 3.5vw;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .tela1 select {
+        font-size: 1.3vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 3.5vw;
+        padding: 0;
+        padding-left: 8px;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .calcular {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.3vw;
+        color: #ffffff;
+        width: 50%;
+        height: 4vw;
+        margin-top: 10%;
+        margin: auto;
+        border-radius: 100vh;
+    }
+
+    .tela2 {
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+
+    .tela2 h1 {
+        margin-top: 3%;
+        text-align: justify;
+        font-family: StatsBold;
+        font-size: 2vw;
+        color: #101028;
+        display: flex;
+        justify-content: center;
+    }
+
+    .saida {
+        padding-left: 6vw;
+    }
+
+    .tela2 h5 {
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #101028;
+        margin-top: 5%;
+    }
+
+    .tela2 #res1,
+    #res2,
+    #res3,
+    #res4 {
+        font-size: 3vw;
+        display: inline;
+        font-family: StatsBold;
+        color: #00E48B;
+    }
+
+    .button2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 50%;
+    }
+
+    .finalizar {
+        margin-top: -10%;
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.3vw;
+        color: #ffffff;
+        width: 25vw;
+        height: 4vw;
+        border-radius: 100vh;
+    }
+
+
+}

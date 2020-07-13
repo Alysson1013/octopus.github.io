@@ -1,0 +1,2827 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: StatsBold;
+    src: url(fonts/StatsGroup-Bold.otf);
+}
+
+@font-face {
+    font-family: StatsRegular;
+    src: url(fonts/Stats-Regular.otf);
+}
+
+.logo {
+    width: 25vw;
+    margin: auto;
+    margin-top: 15%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.tela1 {
+    padding: 7vw;
+}
+
+.tela1 h1 {
+    text-align: justify;
+    font-size: 3.3vw;
+    font-family: StatsBold;
+    color: #0F1028;
+}
+
+.tela1 h4 {
+    text-align: justify;
+    font-size: 3vw;
+    font-family: StatsBold;
+    color: #8C8D92;
+    margin-top: 5%;
+}
+
+.tela1 ul {
+    margin-left: -2.5vw;
+    text-align: justify;
+    font-size: 3vw;
+    font-family: StatsBold;
+    color: #8C8D92;
+}
+
+ul {
+    list-style: none
+}
+
+ul li:before {
+    content: '\2022';
+    margin: 0 10px;
+    color: #00E48B
+        /* cor da bolinha */
+}
+
+.tela1 button {
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 3.5vw;
+    color: #ffffff;
+    width: 100%;
+    height: 12vw;
+    margin-top: 10%;
+    border-radius: 100vh;
+}
+
+.tela1 .botoes {
+    display: block;
+    padding: 5vw;
+    margin-top: -5%;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.inputfile+label {
+    margin: auto;
+    width: 100%;
+    height: 12vw;
+    font-family: StatsBold;
+    font-size: 3.5vw;
+    text-align: center;
+    line-height: 12vw;
+    color: white;
+    background-color: #00E48B;
+    border-radius: 100vw;
+    display: inline-block;
+}
+
+.inputfile+label {
+    cursor: pointer;
+}
+
+.tela2 {
+    padding: 7vw;
+}
+
+.tela2 h1 {
+    font-size: 4.9vw;
+    font-family: StatsBold;
+    color: #0F1028;
+    margin-top: 5%;
+}
+
+.tela2 h5 {
+    font-size: 3.7vw;
+    font-family: StatsBold;
+    color: #0F1028;
+    margin-top: 10%;
+}
+
+.tela2 textarea {
+    font-size: 3.7vw;
+    font-family: StatsRegular;
+    margin-top: 1%;
+    width: 100%;
+    height: 10vw;
+    padding: 2vw;
+    border: 2px solid #8C8D92;
+    color: #8C8D92;
+    border-radius: 5px;
+    outline: none;
+}
+
+.tela2 textarea:focus {
+    border: #00E48B 2px solid;
+}
+
+.tela2 h2 {
+    font-size: 4vw;
+    margin-top: 7%;
+    font-family: StatsBold;
+    text-align: center;
+    color: #8C8D92;
+}
+
+.populacao svg {
+    width: 20vw;
+    display: block;
+    margin: auto;
+}
+
+.amostra svg {
+    width: 18.5vw;
+    display: block;
+    margin: auto;
+}
+
+.populacao {
+    float: left;
+    color: #8C8D92;
+    width: 42vw;
+    height: 30vw;
+    border-radius: 7px;
+    border: 2px solid #8C8D92;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    font-family: StatsRegular;
+    cursor: pointer;
+}
+
+.populacao:hover {
+    border: 2px solid #2DE082;
+    transition-duration: 0.4s;
+    color: #2DE082;
+}
+
+.populacao:hover #pessoas {
+    fill: #2DE082;
+    transition-duration: 0.4s;
+}
+
+#populacao:checked~label .populacao {
+    color: #fff;
+    background-color: #2DE082;
+    border-color: #2DE082;
+    border-style: solid;
+    transition-duration: 0.9s;
+}
+
+#populacao:checked~label #pessoas {
+    fill: #fff;
+    transition-duration: 0.9s;
+}
+
+#populacao:checked~label .txtPopulacao {
+    color: #fff;
+    transition-duration: 0.9s;
+}
+
+.amostra {
+    float: right;
+    color: #8C8D92;
+    width: 42vw;
+    height: 30vw;
+    border-radius: 7px;
+    border: 2px solid #8C8D92;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    font-family: StatsRegular;
+    cursor: pointer;
+    margin-right: -3%;
+}
+
+.amostra:hover {
+    border: 2px solid #2DE082;
+    transition-duration: 0.4s;
+    color: #2DE082;
+}
+
+.amostra:hover #frascos {
+    fill: #2DE082;
+    transition-duration: 0.4s;
+}
+
+#amostra:checked~label .amostra {
+    color: #fff;
+    background-color: #2DE082;
+    border-color: #2DE082;
+    border-style: solid;
+    transition-duration: 0.9s;
+}
+
+#amostra:checked~label #frascos {
+    fill: #fff;
+    transition-duration: 0.9s;
+}
+
+#amostra:checked~label .txtAmostra {
+    color: #fff;
+    transition-duration: 0.9s;
+}
+
+.proximo {
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 4.3vw;
+    color: #ffffff;
+    width: 100%;
+    height: 15vw;
+    margin-top: 10%;
+    border-radius: 100vh;
+}
+
+.tela3 {
+    padding: 7vw;
+}
+
+.tela3 h1 {
+    font-size: 4.9vw;
+    font-family: StatsBold;
+    color: #0F1028;
+    margin-top: 5%;
+}
+
+.tela3 h5 {
+    font-size: 3.7vw;
+    font-family: StatsBold;
+    color: #0F1028;
+    margin-top: 10%;
+}
+
+.tela3 textarea {
+    font-size: 3.7vw;
+    font-family: StatsRegular;
+    margin-top: 1%;
+    width: 100%;
+    height: 10vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 2vw;
+    border: 2px solid #8C8D92;
+    color: #8C8D92;
+    border-radius: 5px;
+    outline: none;
+}
+
+.tela3 textarea:focus {
+    border: #00E48B 2px solid;
+}
+
+.tela3 input {
+    font-size: 3.7vw;
+    font-family: StatsRegular;
+    margin-top: 1%;
+    width: 100%;
+    height: 10vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 2vw;
+    border: 2px solid #8C8D92;
+    color: #8C8D92;
+    border-radius: 5px;
+    outline: none;
+}
+
+.tela3 input:focus {
+    border: #00E48B 2px solid;
+}
+
+.nominal svg {
+    width: 15vw;
+    display: block;
+    margin: auto;
+}
+
+.ordinal svg {
+    width: 15vw;
+    display: block;
+    margin: auto;
+}
+
+.discreta svg {
+    width: 15vw;
+    display: block;
+    margin: auto;
+}
+
+.continua svg {
+    width: 15vw;
+    display: block;
+    margin: auto;
+}
+
+.tela3 h2 {
+    font-size: 4vw;
+    margin-top: 7%;
+    font-family: StatsBold;
+    text-align: center;
+}
+
+.nominal {
+    float: left;
+    color: #8C8D92;
+    width: 42vw;
+    height: 30vw;
+    border-radius: 7px;
+    border: 2px solid #8C8D92;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    font-family: StatsRegular;
+    cursor: pointer;
+}
+
+.nominal:hover {
+    border: 2px solid #2DE082;
+    transition-duration: 0.4s;
+    color: #2DE082;
+}
+
+.nominal:hover #chartnominal {
+    fill: #2DE082;
+    transition-duration: 0.4s;
+}
+
+#nominal:checked~label .nominal {
+    color: #fff;
+    background-color: #2DE082;
+    border-color: #2DE082;
+    border-style: solid;
+    transition-duration: 0.9s;
+}
+
+#nominal:checked~label #chartnominal {
+    fill: #fff;
+    transition-duration: 0.9s;
+}
+
+.ordinal {
+    float: left;
+    color: #8C8D92;
+    width: 42vw;
+    height: 30vw;
+    border-radius: 7px;
+    border: 2px solid #8C8D92;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    font-family: StatsRegular;
+    cursor: pointer;
+    margin-left: 3.4%;
+}
+
+.ordinal:hover {
+    border: 2px solid #2DE082;
+    transition-duration: 0.4s;
+    color: #2DE082;
+}
+
+.ordinal:hover #ordinalnova-2 {
+    fill: #2DE082;
+    transition-duration: 0.4s;
+}
+
+#ordinal:checked~label .ordinal {
+    color: #fff;
+    background-color: #2DE082;
+    border-color: #2DE082;
+    border-style: solid;
+    transition-duration: 0.9s;
+}
+
+#ordinal:checked~label #ordinalnova-2 {
+    fill: #fff;
+    transition-duration: 0.9s;
+}
+
+.discreta {
+    float: left;
+    color: #8C8D92;
+    width: 42vw;
+    height: 30vw;
+    border-radius: 7px;
+    border: 2px solid #8C8D92;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    font-family: StatsRegular;
+    cursor: pointer;
+}
+
+.discreta:hover {
+    border: 2px solid #2DE082;
+    transition-duration: 0.4s;
+    color: #2DE082;
+}
+
+.discreta:hover #discretanova-2 {
+    fill: #2DE082;
+    transition-duration: 0.4s;
+}
+
+#discreta:checked~label .discreta {
+    color: #fff;
+    background-color: #2DE082;
+    border-color: #2DE082;
+    border-style: solid;
+    transition-duration: 0.9s;
+}
+
+#discreta:checked~label #discretanova-2 {
+    fill: #fff;
+    transition-duration: 0.9s;
+}
+
+.continua {
+    float: left;
+    color: #8C8D92;
+    width: 42vw;
+    height: 30vw;
+    border-radius: 7px;
+    border: 2px solid #8C8D92;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    font-family: StatsRegular;
+    cursor: pointer;
+    margin-left: 3.4%;
+}
+
+.continua:hover {
+    border: 2px solid #2DE082;
+    transition-duration: 0.4s;
+    color: #2DE082;
+}
+
+.continua:hover #continuanova-2 {
+    fill: #2DE082;
+    transition-duration: 0.4s;
+}
+
+#continua:checked~label .continua {
+    color: #fff;
+    background-color: #2DE082;
+    border-color: #2DE082;
+    border-style: solid;
+    transition-duration: 0.9s;
+}
+
+#continua:checked~label #continuanova-2 {
+    fill: #fff;
+    transition-duration: 0.9s;
+}
+
+.concluir {
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 4.3vw;
+    color: #ffffff;
+    width: 100%;
+    height: 15vw;
+    margin-top: 5%;
+    border-radius: 100vh;
+}
+
+.tela4 {
+    padding: 7vw;
+}
+
+.tela4 h1 {
+    font-size: 4.7vw;
+    font-family: StatsBold;
+    color: #0F1028;
+    margin-top: 5%;
+}
+
+.tela4 button {
+    margin-top: 3%;
+    border: 3px solid #8C8D92;
+    width: 18.8vw;
+    height: 8vw;
+    background-color: transparent;
+    border-radius: 30px;
+    color: #8C8D92;
+    font-family: StatsBold;
+    font-size: 3vw;
+    outline: none;
+    margin-left: 2%;
+}
+
+.tela4 button:hover {
+    border: 3px solid #00E48B;
+    width: 18.8vw;
+    height: 8vw;
+    background-color: #00E48B;
+    border-radius: 30px;
+    color: #ffffff;
+    font-family: StatsBold;
+    outline: none;
+    transition-duration: 0.4s;
+}
+
+.tela4 canvas {
+    margin-top: 5%;
+}
+
+.tela4 .Quant {
+    border-radius: 10px;
+    height: 50vw;
+    margin-top: 10%;
+}
+
+.tela4 .Quant h3 {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 6vw;
+    font-family: StatsBold;
+    color: #0F1028;
+}
+
+.tela4 .Quant #QuantP {
+    display: inline;
+    text-align: center;
+    font-size: 6vw;
+    font-family: StatsBold;
+    color: #00E48B;
+}
+
+.tela4 .Quant h5 {
+    text-align: center;
+    margin-top: 5%;
+    font-family: StatsBold;
+    color: #0F1028;
+
+}
+
+.tela4 .mmm-dv {
+    margin-top: 10%;
+    padding-left: 13vw;
+}
+
+.tela4 .mmm-dv h3 {
+    font-family: StatsBold;
+    color: #0F1028;
+    font-size: 4vw;
+    text-align: left;
+    margin-top: 3%;
+
+}
+
+.tela4 .mmm-dv p {
+    font-family: StatsBold;
+    color: #00E48B;
+    font-size: 4vw;
+    display: inline;
+}
+
+.tela4 .Quant select {
+    border: 3px solid #8C8D92;
+    border-radius: 5px;
+    width: 30vw;
+    height: 8vw;
+    margin-top: 10%;
+    font-family: StatsBold;
+    font-size: 4vw;
+    color: #0F1028;
+    outline: none;
+
+}
+
+.tela4 .Quant select:hover {
+    border: 3px solid #00E48B;
+}
+
+.tela4 .Quant .TipoQ {
+    float: left;
+    margin-left: 7vw;
+}
+
+.tela4 .Quant .NumQ {
+    margin-left: 10vw;
+}
+
+.tela4 #QuantP {
+    text-align: center;
+    margin-top: 5%;
+    font-family: StatsBold;
+    color: #0F1028;
+    font-size: 4.5vw;
+}
+
+.tela4 .finalizar {
+    display: block;
+    margin: auto;
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 3vw;
+    color: #ffffff;
+    width: 60%;
+    height: 8vw;
+    margin-top: 5%;
+    border-radius: 100vh;
+    text-decoration: none;
+}
+
+.tela4 .finalizar:hover {
+    display: block;
+    margin: auto;
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 3vw;
+    color: #ffffff;
+    width: 60%;
+    height: 8vw;
+    margin-top: 5%;
+    border-radius: 100vh;
+}
+
+@media (min-width: 1361px) {
+    .logo {
+        width: 10vw;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    .tela1,
+    .tela2,
+    .tela3,
+    .tela4 {
+        padding-left: 27vw;
+        padding-right: 27vw;
+    }
+
+    .tela1 h1 {
+        margin-top: -8%;
+        text-align: justify;
+        font-size: 1.73vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela1 h4 {
+        text-align: justify;
+        font-size: 1.4vw;
+        font-family: StatsBold;
+        color: #8C8D92;
+        margin-top: 5%;
+    }
+
+    .tela1 ul {
+        margin-left: -0.9vw;
+        text-align: justify;
+        font-size: 1.4vw;
+        font-family: StatsBold;
+        color: #8C8D92;
+    }
+
+    ul {
+        list-style: none
+    }
+
+    ul li:before {
+        content: '\2022';
+        margin: 0 10px;
+        color: #00E48B
+            /* cor da bolinha */
+    }
+
+    .tela1 button {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.3vw;
+        color: #ffffff;
+        width: 60%;
+        height: 4vw;
+        margin-top: 10%;
+        border-radius: 100vh;
+        float: right;
+        margin-top: -6%;
+        margin-right: -12.5%;
+        transition-duration: 0.4s;
+    }
+
+    button:hover {
+        background-color: #1caf77;
+        transition-duration: 0.4s;
+    }
+
+    .tela1 .botoes {
+        margin-left: 3%;
+        margin-top: -5%;
+    }
+
+    .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .inputfile+label {
+        margin: auto;
+        width: 60%;
+        height: 4vw;
+        font-family: StatsBold;
+        font-size: 1.3vw;
+        text-align: center;
+        line-height: 4vw;
+        color: white;
+        background-color: #00E48B;
+        border-radius: 100vw;
+        float: left;
+        margin-left: -15%;
+        transition-duration: 0.4s;
+    }
+
+    .inputfile+label:hover {
+        background-color: #1caf77;
+        transition-duration: 0.4s;
+    }
+
+    .inputfile+label {
+        cursor: pointer;
+    }
+
+    .tela2 h1 {
+        font-size: 2vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        text-align: justify;
+        margin-top: -10%;
+    }
+
+    .tela2 h5 {
+        font-size: 1.3vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 5%;
+    }
+
+    .tela2 textarea {
+        font-size: 1.2vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .tela2 textarea:focus {
+        border: #00E48B 2px solid;
+    }
+
+    .tela2 h2 {
+        font-size: 1.5vw;
+        margin-top: 4%;
+        font-family: StatsBold;
+        text-align: center;
+        color: #8C8D92;
+    }
+
+    .populacao svg {
+        width: 6vw;
+        display: block;
+        margin: auto;
+        margin-top: 2%;
+    }
+
+    .amostra svg {
+        width: 5.5vw;
+        display: block;
+        margin: auto;
+        margin-top: 2.1%;
+    }
+
+    .populacao {
+        float: left;
+        color: #8C8D92;
+        width: 21.1vw;
+        height: 10vw;
+        border-radius: 7px;
+        border: 2px solid #8C8D92;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+    }
+
+    .populacao:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #2DE082;
+    }
+
+    .populacao:hover #pessoas {
+        fill: #2DE082;
+        transition-duration: 0.4s;
+    }
+
+    .populacao:hover .txtPopulacao {
+        color: #2DE082;
+        transition-duration: 0.4s;
+    }
+
+    #populacao:checked~label .populacao {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #populacao:checked~label #pessoas {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    #populacao:checked~label .txtPopulacao {
+        color: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .amostra {
+        float: right;
+        color: #8C8D92;
+        width: 21.1vw;
+        height: 10vw;
+        border-radius: 7px;
+        border: 2px solid #8C8D92;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+        margin-right: -11%;
+    }
+
+    .amostra:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #2DE082;
+    }
+
+    .amostra:hover #frascos {
+        fill: #2DE082;
+        transition-duration: 0.4s;
+    }
+
+    .amostra:hover .txtAmostra {
+        color: #2DE082;
+        transition-duration: 0.4s;
+    }
+
+    #amostra:checked~label .amostra {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #amostra:checked~label #frascos {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    #amostra:checked~label .txtAmostra {
+        color: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .proximo {
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.4vw;
+        color: #ffffff;
+        width: 60%;
+        height: 4vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+    }
+
+    .tela3 h1 {
+        font-size: 2vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        text-align: justify;
+        margin-top: -10%;
+    }
+
+    .tela3 h5 {
+        font-size: 1.3vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 5%;
+    }
+
+    .tela3 textarea {
+        font-size: 1.2vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .tela3 textarea:focus {
+        border: #00E48B 2px solid;
+    }
+
+    .tela3 input {
+        font-size: 1.2vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 3.5vw;
+        padding: 10px;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .tela3 input:focus {
+        border: #00E48B 2px solid;
+    }
+
+    .nominal svg {
+        width: 4vw;
+        display: block;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .ordinal svg {
+        width: 4vw;
+        display: block;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .discreta svg {
+        width: 4vw;
+        display: block;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .continua svg {
+        width: 4vw;
+        display: block;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .tela3 h2 {
+        font-size: 1.2vw;
+        margin-top: 4%;
+        font-family: StatsBold;
+        text-align: center;
+    }
+
+    .nominal {
+        float: left;
+        color: #8C8D92;
+        width: 21.9vw;
+        height: 10vw;
+        border-radius: 7px;
+        border: 2px solid #8C8D92;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+    }
+
+    .nominal:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #2DE082;
+    }
+
+    .nominal:hover #chartnominal {
+        fill: #2DE082;
+        transition-duration: 0.4s;
+    }
+
+    #nominal:checked~label .nominal {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #nominal:checked~label #chartnominal {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .ordinal {
+        float: left;
+        color: #8C8D92;
+        width: 21.9vw;
+        height: 10vw;
+        border-radius: 7px;
+        border: 2px solid #8C8D92;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+        margin-left: 3.4%;
+    }
+
+    .ordinal:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #2DE082;
+    }
+
+    .ordinal:hover #ordinalnova-2 {
+        fill: #2DE082;
+        transition-duration: 0.4s;
+    }
+
+    #ordinal:checked~label .ordinal {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #ordinal:checked~label #ordinalnova-2 {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .discreta {
+        float: left;
+        color: #8C8D92;
+        width: 21.9vw;
+        height: 10vw;
+        border-radius: 7px;
+        border: 2px solid #8C8D92;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+    }
+
+    .discreta:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #2DE082;
+    }
+
+    .discreta:hover #discretanova-2 {
+        fill: #2DE082;
+        transition-duration: 0.4s;
+    }
+
+    #discreta:checked~label .discreta {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #discreta:checked~label #discretanova-2 {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .continua {
+        float: left;
+        color: #8C8D92;
+        width: 21.9vw;
+        height: 10vw;
+        border-radius: 7px;
+        border: 2px solid #8C8D92;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+        margin-left: 3.4%;
+    }
+
+    .continua:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #2DE082;
+    }
+
+    .continua:hover #continuanova-2 {
+        fill: #2DE082;
+        transition-duration: 0.4s;
+    }
+
+    #continua:checked~label .continua {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #continua:checked~label #continuanova-2 {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .concluir {
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.4vw;
+        color: #ffffff;
+        width: 60%;
+        height: 4vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+    }
+
+    .tela4 h1 {
+        font-size: 2.2vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        text-align: justify;
+        margin-top: -8%;
+    }
+
+    .tela4 .finalizar {
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.4vw;
+        color: #ffffff;
+        width: 60%;
+        height: 4vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+    }
+
+    .tela4 .finalizar:hover {
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.4vw;
+        color: #ffffff;
+        width: 60%;
+        height: 4vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+    }
+
+    .tela4 button {
+        margin-top: 3%;
+        border: 3px solid #8C8D92;
+        width: 9.8vw;
+        height: 3vw;
+        background-color: transparent;
+        border-radius: 30px;
+        color: #8C8D92;
+        font-family: StatsBold;
+        font-size: 1.2vw;
+        outline: none;
+        margin-left: 2%;
+    }
+
+    .tela4 button:hover {
+        border: 3px solid #00E48B;
+        width: 9.8vw;
+        height: 3vw;
+        background-color: #00E48B;
+        border-radius: 30px;
+        color: #ffffff;
+        font-family: StatsBold;
+        outline: none;
+        transition-duration: 0.4s;
+    }
+
+    .tela4 button:focus {
+        border: 3px solid #00E48B;
+        background-color: #00E48B;
+        color: #ffffff;
+    }
+
+    .tela4 .table-responsive {
+        margin-top: 7%;
+    }
+
+    .tela4 canvas {
+        margin-top: 5%;
+    }
+
+    .tela4 .Quant h3 {
+        text-align: center;
+        margin-top: 5%;
+        font-size: 2.5vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela4 .Quant #QuantP {
+        display: inline;
+        text-align: center;
+        font-size: 2.5vw;
+        font-family: StatsBold;
+        color: #00E48B;
+    }
+
+    .tela4 .mmm-dv {
+        margin-top: 7%;
+        padding-left: 100px;
+    }
+
+    .tela4 .mmm-dv h3 {
+        font-family: StatsBold;
+        color: #0F1028;
+        font-size: 2vw;
+        text-align: left;
+        margin-top: 3%;
+
+    }
+
+    .tela4 .mmm-dv p {
+        font-family: StatsBold;
+        color: #00E48B;
+        font-size: 2vw;
+        display: inline;
+    }
+
+    .tela4 .Quant {
+        border-radius: 10px;
+        height: 25vw;
+        margin-top: 5%;
+    }
+
+    .tela4 .Quant h5 {
+        text-align: center;
+        margin-top: 5%;
+        font-family: StatsBold;
+        color: #0F1028;
+
+    }
+
+    .tela4 .Quant select {
+        border: 3px solid #8C8D92;
+        border-radius: 5px;
+        width: 10.5vw;
+        height: 5vw;
+        margin-top: 10%;
+        font-family: StatsBold;
+        font-size: 1.5vw;
+        color: #0F1028;
+        outline: none;
+
+    }
+
+    .tela4 .Quant select:hover {
+        border: 3px solid #00E48B;
+    }
+
+    .tela4 .Quant .TipoQ {
+        float: left;
+        margin-left: 7vw;
+    }
+
+    .tela4 .Quant .NumQ {
+        margin-left: 10vw;
+    }
+
+    .tela4 #QuantP {
+        text-align: center;
+        margin-top: 10%;
+        font-family: StatsBold;
+        color: #0F1028;
+        font-size: 1.8vw;
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .logo {
+        width: 17vw;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    .tela1 {
+        padding: 7vw;
+    }
+
+    .tela1 h1 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        text-align: justify;
+        font-size: 2.78vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela1 h4 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        text-align: justify;
+        font-size: 2.5vw;
+        font-family: StatsBold;
+        color: #8C8D92;
+        margin-top: 5%;
+    }
+
+    .tela1 ul {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        margin-left: -2.5vw;
+        text-align: justify;
+        font-size: 2.5vw;
+        font-family: StatsBold;
+        color: #8C8D92;
+    }
+
+    ul {
+        list-style: none
+    }
+
+    ul li:before {
+        content: '\2022';
+        margin: 0 10px;
+        color: #00E48B
+            /* cor da bolinha */
+    }
+
+    .tela1 button {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 2.5vw;
+        color: #ffffff;
+        width: 100%;
+        height: 8vw;
+        margin-top: 10%;
+        border-radius: 100vh;
+    }
+
+    .tela1 .botoes {
+        display: block;
+        padding: 20vw;
+        margin-top: -20%;
+    }
+
+    .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .inputfile+label {
+        margin: auto;
+        margin-top: 10%;
+        width: 100%;
+        height: 8vw;
+        font-family: StatsBold;
+        font-size: 2.5vw;
+        text-align: center;
+        line-height: 8vw;
+        color: white;
+        background-color: #00E48B;
+        border-radius: 100vw;
+        display: inline-block;
+    }
+
+    .inputfile+label {
+        cursor: pointer;
+    }
+
+    .tela2 {
+        padding: 7vw;
+    }
+
+    .tela2 h1 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        font-size: 3.9vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 5%;
+    }
+
+    .tela2 h5 {
+        font-size: 3vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 10%;
+    }
+
+    .tela2 textarea {
+        font-size: 2.5vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 10vw;
+        padding: 0.5vw;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .input-area {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    #txtTipoP {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    #opcoes {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela2 textarea:focus {
+        border: #00E48B 2px solid;
+    }
+
+    .tela2 h2 {
+        font-size: 3.2vw;
+        margin-top: 10%;
+        font-family: StatsBold;
+        text-align: center;
+
+    }
+
+    .populacao svg {
+        width: 15vw;
+        display: block;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .amostra svg {
+        width: 13.9vw;
+        display: block;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .populacao {
+        float: left;
+        color: #ACA8C1;
+        width: 32vw;
+        height: 30vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+    }
+
+    .populacao:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .populacao:hover #pessoas {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #populacao:checked~label .populacao {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #populacao:checked~label #pessoas {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .amostra {
+        float: right;
+        color: #ACA8C1;
+        width: 32vw;
+        height: 30vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+        margin-right: -24%;
+    }
+
+    .amostra:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .amostra:hover #frascos {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #amostra:checked~label .amostra {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #amostra:checked~label #frascos {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .botao-proximo {
+        padding: 20vw;
+    }
+
+    .proximo {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #ffffff;
+        width: 100%;
+        height: 10vw;
+        margin-top: -5%;
+        border-radius: 100vh;
+    }
+
+    .tela3 {
+        padding: 7vw;
+    }
+
+    .tela3 h1 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        font-size: 3.9vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 5%;
+    }
+
+    .tela3 h5 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        font-size: 3vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 10%;
+    }
+
+    .tela3 textarea {
+        font-size: 3vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 8vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 2vw;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .text-area {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela3 textarea:focus {
+        border: #00E48B 2px solid;
+    }
+
+    .tela3 input {
+        font-size: 3vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 8vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 2vw;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .hierarq {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela3 input:focus {
+        border: #00E48B 2px solid;
+    }
+
+    #opcoes-variavel {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        margin-top: 2%;
+    }
+
+    .nominal svg {
+        width: 12vw;
+        display: block;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .ordinal svg {
+        width: 12vw;
+        display: block;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .discreta svg {
+        width: 12vw;
+        display: block;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .continua svg {
+        width: 12vw;
+        display: block;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .tela3 h2 {
+        font-size: 2.7vw;
+        margin-top: 5%;
+        font-family: StatsBold;
+        text-align: center;
+    }
+
+    .nominal {
+        float: left;
+        color: #ACA8C1;
+        width: 35vw;
+        height: 25vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+    }
+
+    .nominal:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .nominal:hover #chartnominal {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #nominal:checked~label .nominal {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #nominal:checked~label #chartnominal {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .ordinal {
+        float: left;
+        color: #ACA8C1;
+        width: 35vw;
+        height: 25vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+        margin-left: 3.4%;
+    }
+
+    .ordinal:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .ordinal:hover #ordinalnova-2 {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #ordinal:checked~label .ordinal {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #ordinal:checked~label #ordinalnova-2 {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .discreta {
+        float: left;
+        color: #ACA8C1;
+        width: 35vw;
+        height: 25vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+    }
+
+    .discreta:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .discreta:hover #discretanova-2 {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #discreta:checked~label .discreta {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #discreta:checked~label #discretanova-2 {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .continua {
+        float: left;
+        color: #ACA8C1;
+        width: 35vw;
+        height: 25vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+        margin-left: 3.4%;
+    }
+
+    .continua:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .continua:hover #continuanova-2 {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #continua:checked~label .continua {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #continua:checked~label #continuanova-2 {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .concluir {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #ffffff;
+        width: 100%;
+        height: 10vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+    }
+
+    .tela4 {
+        padding: 7vw;
+    }
+
+    .tela4 h1 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        font-size: 3.9vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 5%;
+    }
+
+    .tela4 button {
+        margin-top: 3%;
+        border: 3px solid #8C8D92;
+        width: 15vw;
+        height: 6vw;
+        background-color: transparent;
+        border-radius: 30px;
+        color: #8C8D92;
+        font-family: StatsBold;
+        font-size: 2.5vw;
+        outline: none;
+        margin-left: 2%;
+    }
+
+    .tela4 button:hover {
+        border: 3px solid #00E48B;
+        width: 15vw;
+        height: 6vw;
+        background-color: #00E48B;
+        border-radius: 30px;
+        color: #ffffff;
+        font-family: StatsBold;
+        outline: none;
+        transition-duration: 0.4s;
+    }
+
+    .botoes-fim {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela4 canvas {
+        display: block;
+        margin: auto;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        margin-top: 5%;
+    }
+
+    .tela4 .mmm-dv {
+        margin-top: 10%;
+        padding-left: 12vw;
+    }
+
+    .tela4 .mmm-dv h3 {
+        font-family: StatsBold;
+        color: #0F1028;
+        font-size: 4vw;
+        text-align: left;
+        margin-top: 3%;
+
+    }
+
+    .tela4 .mmm-dv p {
+        font-family: StatsBold;
+        color: #00E48B;
+        font-size: 4vw;
+        display: inline;
+    }
+
+    .tela4 .Quant {
+        border-radius: 10px;
+        height: 40vw;
+        margin-top: 5%;
+
+
+    }
+
+    .diminuir-quant {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela4 .Quant h3 {
+        text-align: center;
+        margin-top: 10%;
+        font-size: 4vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela4 .Quant #QuantP {
+        display: inline;
+        text-align: center;
+        font-size: 4vw;
+        font-family: StatsBold;
+        color: #00E48B;
+    }
+
+    .tela4 .Quant h5 {
+        text-align: center;
+        margin-top: 5%;
+        font-family: StatsBold;
+        color: #0F1028;
+
+    }
+
+    .tela4 .Quant select {
+        border: 3px solid #8C8D92;
+        border-radius: 5px;
+        width: 23.5vw;
+        height: 6vw;
+        margin-top: 10%;
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #0F1028;
+        outline: none;
+
+    }
+
+    #txttab {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela4 .Quant select:hover {
+        border: 3px solid #00E48B;
+    }
+
+    .tela4 .Quant .TipoQ {
+        float: left;
+        margin-left: 7vw;
+    }
+
+    .tela4 .Quant .NumQ {
+        margin-left: 10vw;
+    }
+
+    .tela4 #QuantP {
+        text-align: center;
+        margin-top: 10%;
+        font-family: StatsBold;
+        color: #0F1028;
+        font-size: 3vw;
+    }
+
+    .tela4 .finalizar {
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.4vw;
+        color: #ffffff;
+        width: 60%;
+        height: 4vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+    }
+
+    .tela4 .finalizar:hover {
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.4vw;
+        color: #ffffff;
+        width: 60%;
+        height: 4vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1360px) {
+    .logo {
+        width: 17vw;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    .tela1 {
+        padding: 7vw;
+    }
+
+    .tela1 h1 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        text-align: justify;
+        font-size: 2.77vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela1 h4 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        text-align: justify;
+        font-size: 2.3vw;
+        font-family: StatsBold;
+        color: #8C8D92;
+        margin-top: 5%;
+    }
+
+    .tela1 ul {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        margin-left: -2.5vw;
+        text-align: justify;
+        font-size: 2.3vw;
+        font-family: StatsBold;
+        color: #8C8D92;
+    }
+
+    ul {
+        list-style: none
+    }
+
+    ul li:before {
+        content: '\2022';
+        margin: 0 10px;
+        color: #00E48B
+            /* cor da bolinha */
+    }
+
+    .tela1 button {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 2.5vw;
+        color: #ffffff;
+        width: 100%;
+        height: 8vw;
+        margin-top: 10%;
+        border-radius: 100vh;
+    }
+
+    .tela1 .botoes {
+        display: block;
+        padding: 20vw;
+        margin-top: -20%;
+    }
+
+    .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .inputfile+label {
+        margin: auto;
+        margin-top: 10%;
+        width: 100%;
+        height: 8vw;
+        font-family: StatsBold;
+        font-size: 2.5vw;
+        text-align: center;
+        line-height: 8vw;
+        color: white;
+        background-color: #00E48B;
+        border-radius: 100vw;
+        display: inline-block;
+    }
+
+    .inputfile+label {
+        cursor: pointer;
+    }
+
+    .tela2 {
+        padding: 7vw;
+    }
+
+    .tela2 h1 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        font-size: 3.9vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 5%;
+    }
+
+    .tela2 h5 {
+        font-size: 3vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 10%;
+    }
+
+    .tela2 textarea {
+        font-size: 2vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 10vw;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .input-area {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    #txtTipoP {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    #opcoes {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela2 textarea:focus {
+        border: #00E48B 2px solid;
+    }
+
+    .tela2 h2 {
+        font-size: 3.2vw;
+        margin-top: 15%;
+        font-family: StatsBold;
+        text-align: center;
+
+    }
+
+    .populacao svg {
+        width: 15vw;
+        display: block;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .amostra svg {
+        width: 13.9vw;
+        display: block;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .populacao {
+        float: left;
+        color: #ACA8C1;
+        width: 32vw;
+        height: 30vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+    }
+
+    .populacao:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .populacao:hover #pessoas {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #populacao:checked~label .populacao {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #populacao:checked~label #pessoas {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .amostra {
+        float: right;
+        color: #ACA8C1;
+        width: 32vw;
+        height: 30vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+        margin-right: -24%;
+    }
+
+    .amostra:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .amostra:hover #frascos {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #amostra:checked~label .amostra {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #amostra:checked~label #frascos {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .botao-proximo {
+        padding: 20vw;
+    }
+
+    .proximo {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #ffffff;
+        width: 100%;
+        height: 10vw;
+        margin-top: -5%;
+        border-radius: 100vh;
+    }
+
+    .tela3 {
+        padding: 7vw;
+    }
+
+    .tela3 h1 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        font-size: 3.9vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 5%;
+    }
+
+    .tela3 h5 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        font-size: 3vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 10%;
+    }
+
+    .tela3 textarea {
+        font-size: 3vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 8vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 2vw;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .text-area {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela3 textarea:focus {
+        border: #00E48B 2px solid;
+    }
+
+    .tela3 input {
+        font-size: 3vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 8vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 2vw;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .hierarq {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela3 input:focus {
+        border: #00E48B 2px solid;
+    }
+
+    #opcoes-variavel {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        margin-top: 2%;
+    }
+
+    .nominal svg {
+        width: 12vw;
+        display: block;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .ordinal svg {
+        width: 12vw;
+        display: block;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .discreta svg {
+        width: 12vw;
+        display: block;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .continua svg {
+        width: 12vw;
+        display: block;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .tela3 h2 {
+        font-size: 2.7vw;
+        margin-top: 5%;
+        font-family: StatsBold;
+        text-align: center;
+    }
+
+    .nominal {
+        float: left;
+        color: #ACA8C1;
+        width: 35vw;
+        height: 25vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+    }
+
+    .nominal:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .nominal:hover #chartnominal {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #nominal:checked~label .nominal {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #nominal:checked~label #chartnominal {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .ordinal {
+        float: left;
+        color: #ACA8C1;
+        width: 35vw;
+        height: 25vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+        margin-left: 3.4%;
+    }
+
+    .ordinal:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .ordinal:hover #ordinalnova-2 {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #ordinal:checked~label .ordinal {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #ordinal:checked~label #ordinalnova-2 {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .discreta {
+        float: left;
+        color: #ACA8C1;
+        width: 35vw;
+        height: 25vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+    }
+
+    .discreta:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .discreta:hover #discretanova-2 {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #discreta:checked~label .discreta {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #discreta:checked~label #discretanova-2 {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .continua {
+        float: left;
+        color: #ACA8C1;
+        width: 35vw;
+        height: 25vw;
+        border-radius: 7px;
+        border: 2px solid #ACA8C1;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-family: StatsRegular;
+        cursor: pointer;
+        margin-left: 3.4%;
+    }
+
+    .continua:hover {
+        border: 2px solid #2DE082;
+        transition-duration: 0.4s;
+        color: #24186D;
+    }
+
+    .continua:hover #continuanova-2 {
+        fill: #24186D;
+        transition-duration: 0.4s;
+    }
+
+    #continua:checked~label .continua {
+        color: #fff;
+        background-color: #2DE082;
+        border-color: #2DE082;
+        border-style: solid;
+        transition-duration: 0.9s;
+    }
+
+    #continua:checked~label #continuanova-2 {
+        fill: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .concluir {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #ffffff;
+        width: 100%;
+        height: 10vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+    }
+
+    .tela4 {
+        padding: 7vw;
+    }
+
+    .tela4 h1 {
+        padding-left: 7vw;
+        padding-right: 7vw;
+        font-size: 3.9vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 5%;
+    }
+
+    .tela4 button {
+        margin-top: 3%;
+        border: 3px solid #8C8D92;
+        width: 15vw;
+        height: 6vw;
+        background-color: transparent;
+        border-radius: 30px;
+        color: #8C8D92;
+        font-family: StatsBold;
+        font-size: 2.5vw;
+        outline: none;
+        margin-left: 2%;
+    }
+
+    .tela4 button:hover {
+        border: 3px solid #00E48B;
+        width: 15vw;
+        height: 6vw;
+        background-color: #00E48B;
+        border-radius: 30px;
+        color: #ffffff;
+        font-family: StatsBold;
+        outline: none;
+        transition-duration: 0.4s;
+    }
+
+    .botoes-fim {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela4 canvas {
+        display: block;
+        margin: auto;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        margin-top: 5%;
+    }
+
+    .tela4 .mmm-dv {
+        margin-top: 10%;
+        padding-left: 12vw;
+    }
+
+    .tela4 .mmm-dv h3 {
+        font-family: StatsBold;
+        color: #0F1028;
+        font-size: 4vw;
+        text-align: left;
+        margin-top: 3%;
+
+    }
+
+    .tela4 .Quant h3 {
+        text-align: center;
+        margin-top: 10%;
+        font-size: 4vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela4 .Quant #QuantP {
+        display: inline;
+        text-align: center;
+        font-size: 4vw;
+        font-family: StatsBold;
+        color: #00E48B;
+    }
+
+    .tela4 .mmm-dv p {
+        font-family: StatsBold;
+        color: #00E48B;
+        font-size: 4vw;
+        display: inline;
+    }
+
+    .tela4 .Quant {
+        border-radius: 10px;
+        height: 40vw;
+        margin-top: 5%;
+
+
+    }
+
+    .diminuir-quant {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela4 .Quant h5 {
+        text-align: center;
+        margin-top: 5%;
+        font-family: StatsBold;
+        color: #0F1028;
+
+    }
+
+    .tela4 .Quant select {
+        border: 3px solid #8C8D92;
+        border-radius: 5px;
+        width: 23.5vw;
+        height: 6vw;
+        margin-top: 10%;
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #0F1028;
+        outline: none;
+
+    }
+
+    #txttab {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .tela4 .Quant select:hover {
+        border: 3px solid #00E48B;
+    }
+
+    .tela4 .Quant .TipoQ {
+        float: left;
+        margin-left: 7vw;
+    }
+
+    .tela4 .Quant .NumQ {
+        margin-left: 10vw;
+    }
+
+    .tela4 #QuantP {
+        text-align: center;
+        margin-top: 10%;
+        font-family: StatsBold;
+        color: #0F1028;
+        font-size: 3vw;
+    }
+
+    .tela4 .finalizar {
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.4vw;
+        color: #ffffff;
+        width: 60%;
+        height: 4vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+    }
+
+    .tela4 .finalizar:hover {
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.4vw;
+        color: #ffffff;
+        width: 60%;
+        height: 4vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+    }
+
+}

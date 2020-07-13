@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: StatsBold;
+    src: url(fonts/StatsGroup-Bold.otf);
+}
+
+@font-face {
+    font-family: StatsRegular;
+    src: url(fonts/Stats-Regular.otf);
+}
+
+.logo {
+    width: 25vw;
+    margin: auto;
+    margin-top: 15%;
+}
+
+.logo svg {
+    width: 100%;
+}
+
+.textos {
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+.texto-principal {
+    margin-top: 10%;
+}
+
+.texto-principal h1 {
+    text-align: justify;
+    font-family: StatsBold;
+    font-size: 3.79vw;
+    color: #101028;
+}
+
+.texto-secundario {
+    margin-top: 5%;
+}
+
+.texto-secundario h3 {
+    text-align: left;
+    font-family: StatsRegular;
+    font-size: 2.83vw;
+    color: #8C8D92;
+}
+
+.botoes {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.normal,
+.binominal,
+.uniforme {
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 3.7vw;
+    color: #ffffff;
+    width: 100%;
+    height: 12vw;
+    margin-top: 10%;
+    border-radius: 100vh;
+    outline: none;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #1caf77;
+    transition-duration: 0.4s;
+}
+
+
+@media (min-width: 768px) {
+    .logo {
+        width: 20vw;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .logo svg {
+        width: 100%;
+    }
+
+    .textos {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .texto-principal h1 {
+        text-align: justify;
+        font-family: StatsBold;
+        font-size: 3.52vw;
+        color: #101028;
+    }
+
+    .texto-secundario h3 {
+        text-align: left;
+        font-family: StatsRegular;
+        font-size: 2.6vw;
+        color: #8C8D92;
+    }
+
+    .botoes {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        margin-left: -2%;
+    }
+
+    .normal,
+    .binominal,
+    .uniforme {
+        float: left;
+        margin-left: 3%;
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 2.5vw;
+        color: #ffffff;
+        width: 30%;
+        height: 8vw;
+        margin-top: 10%;
+        border-radius: 100vh;
+        outline: none;
+    }
+}
+
+@media (min-width: 1361px) {
+    .logo {
+        width: 10vw;
+        margin: auto;
+        margin-top: 4%;
+    }
+
+    .logo svg {
+        width: 100%;
+    }
+
+    .textos {
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+
+    .texto-principal h1 {
+        margin-top: -5%;
+        text-align: justify;
+        font-family: StatsBold;
+        font-size: 2.3vw;
+        color: #101028;
+        display: flex;
+        justify-content: center;
+    }
+
+    .texto-secundario h3 {
+        margin-top: -3%;
+        text-align: left;
+        font-family: StatsRegular;
+        font-size: 1.72vw;
+        color: #8C8D92;
+        display: flex;
+        justify-content: center;
+    }
+
+    .botoes {
+        padding-left: 22vw;
+        padding-right: 22vw;
+        margin-left: -1%;
+    }
+
+    .normal,
+    .binominal,
+    .uniforme {
+        float: left;
+        margin-left: 5%;
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.5vw;
+        color: #ffffff;
+        width: 26%;
+        height: 4vw;
+        margin-top: 7%;
+        border-radius: 100vh;
+        outline: none;
+    }
+}

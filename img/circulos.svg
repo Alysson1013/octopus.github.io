@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1003" height="1080" viewBox="0 0 1003 1080">
+  <defs>
+    <clipPath id="clip-circulos">
+      <rect width="1003" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="circulos" clip-path="url(#clip-circulos)">
+    <g id="Elipse_1" data-name="Elipse 1" transform="translate(418 456)" fill="none" stroke="#fff" stroke-width="1">
+      <circle cx="84.5" cy="84.5" r="84.5" stroke="none"/>
+      <circle cx="84.5" cy="84.5" r="84" fill="none"/>
+    </g>
+    <g id="Elipse_2" data-name="Elipse 2" transform="translate(330 368)" fill="none" stroke="#fff" stroke-width="1" opacity="0.75">
+      <circle cx="172.5" cy="172.5" r="172.5" stroke="none"/>
+      <circle cx="172.5" cy="172.5" r="172" fill="none"/>
+    </g>
+    <g id="Elipse_3" data-name="Elipse 3" transform="translate(237 275)" fill="none" stroke="#fff" stroke-width="1" opacity="0.5">
+      <circle cx="265.5" cy="265.5" r="265.5" stroke="none"/>
+      <circle cx="265.5" cy="265.5" r="265" fill="none"/>
+    </g>
+    <g id="Elipse_4" data-name="Elipse 4" transform="translate(141 179)" fill="none" stroke="#fff" stroke-width="1" opacity="0.25">
+      <circle cx="361.5" cy="361.5" r="361.5" stroke="none"/>
+      <circle cx="361.5" cy="361.5" r="361" fill="none"/>
+    </g>
+    <g id="Elipse_5" data-name="Elipse 5" transform="translate(42 80)" fill="none" stroke="#fff" stroke-width="1" opacity="0.1">
+      <circle cx="460.5" cy="460.5" r="460.5" stroke="none"/>
+      <circle cx="460.5" cy="460.5" r="460" fill="none"/>
+    </g>
+  </g>
+</svg>

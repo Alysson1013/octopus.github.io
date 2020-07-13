@@ -1,0 +1,795 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: StatsBold;
+    src: url(fonts/StatsGroup-Bold.otf);
+}
+
+@font-face {
+    font-family: StatsRegular;
+    src: url(fonts/Stats-Regular.otf);
+}
+
+.logo {
+    width: 25vw;
+    margin: auto;
+    margin-top: 15%;
+}
+
+.logo svg {
+    width: 100%;
+}
+
+.tela1 {
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+.tela1 h1 {
+    margin-top: 10%;
+    text-align: justify;
+    font-size: 3.7vw;
+    font-family: StatsBold;
+    color: #0F1028;
+}
+
+.tela1 h3 {
+    font-size: 3.5vw;
+    font-family: StatsBold;
+    color: #0F1028;
+    margin-top: 8%;
+}
+
+.tela1 textarea {
+    font-size: 3vw;
+    font-family: StatsRegular;
+    margin-top: 1%;
+    width: 98%;
+    height: 7vw;
+    padding-left: 1vw;
+    padding-top: 3vw;
+    border: 2px solid #8C8D92;
+    color: #8C8D92;
+    border-radius: 5px;
+    outline: none;
+}
+
+.calcular {
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 3.7vw;
+    color: #ffffff;
+    width: 100%;
+    height: 12vw;
+    margin-top: 10%;
+    border-radius: 100vh;
+    transition-duration: 0.4s;
+    outline: none;
+}
+
+.calcular:hover {
+    background-color: #1caf77;
+    transition-duration: 0.4s;
+}
+
+.tela2 {
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+.tela2 h1 {
+    margin-top: 10%;
+    text-align: justify;
+    font-size: 4.2vw;
+    font-family: StatsBold;
+    color: #0F1028;
+}
+
+.tela2 h5 {
+    margin-top: 5%;
+    font-size: 4vw;
+    font-family: StatsBold;
+    color: #0F1028;
+}
+
+.tela2 #resultado1 {
+    display: inline-block;
+    font-size: 4vw;
+    font-family: StatsBold;
+    color: #00E48B;
+}
+
+.tela2 #resultado2 {
+    display: inline-block;
+    font-size: 4vw;
+    font-family: StatsBold;
+    color: #00E48B;
+}
+
+canvas {
+    margin-top: 5%;
+}
+
+.botao-eixo {
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 3.5vw;
+    color: #ffffff;
+    width: 100%;
+    height: 12vw;
+    margin-top: 10%;
+    border-radius: 100vh;
+    transition-duration: 0.4s;
+    outline: none;
+}
+
+.botao-eixo:hover {
+    background-color: #1caf77;
+    transition-duration: 0.4s;
+}
+
+.desfazertd {
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 3.5vw;
+    color: #ffffff;
+    width: 100%;
+    height: 12vw;
+    margin-top: 10%;
+    border-radius: 100vh;
+    transition-duration: 0.4s;
+    outline: none;
+}
+
+.desfazertd:hover {
+    background-color: #1caf77;
+    transition-duration: 0.4s;
+}
+
+.desfazer {
+    border: none;
+    background-color: #00E48B;
+    font-family: StatsBold;
+    font-size: 3.5vw;
+    color: #ffffff;
+    width: 100%;
+    height: 12vw;
+    margin-top: 10%;
+    border-radius: 100vh;
+    transition-duration: 0.4s;
+    outline: none;
+}
+
+.desfazer:hover {
+    background-color: #1caf77;
+    transition-duration: 0.4s;
+}
+
+rea-upload {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+}
+
+.area-upload label.label-upload {
+    border: 2px dashed #00E48B;
+    min-height: 200px;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #00E48B;
+    position: relative;
+    font-family: StatsBold;
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+.area-upload label.label-upload.highlight {
+    background-color: #fffdaa;
+}
+
+.area-upload label.label-upload * {
+    pointer-events: none;
+}
+
+.area-upload input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    -webkit-appearance: none;
+    opacity: 0;
+}
+
+.area-upload .lista-uploads .barra {
+    background-color: #e6e6e6;
+    margin: 10px 0;
+    width: 100%;
+    position: relative;
+}
+
+.area-upload .lista-uploads .barra .fill {
+    background-color: #a1f7ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-width: 0;
+
+    -webkit-transition: .2s all;
+    -moz-transition: .2s all;
+    -o-transition: .2s all;
+    transition: .2s all;
+}
+
+.area-upload .lista-uploads .barra.complete .fill {
+    background-color: #bcffdf;
+}
+
+.area-upload .lista-uploads .barra .text {
+    z-index: 10;
+    text-align: center;
+    padding: 3px 5px;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    color: black;
+    font-size: 12px;
+}
+
+.area-upload .lista-uploads .barra .text a {
+    color: black;
+    font-weight: bold;
+}
+
+.area-upload .lista-uploads .barra.error .fill {
+    background-color: #c02929;
+    color: white;
+    min-width: 100%;
+}
+
+.area-upload .lista-uploads .barra.error .text {
+    color: white;
+}
+
+.area-upload i {
+    font-size: 5vh;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        width: 20vw;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .logo svg {
+        width: 100%;
+    }
+
+    .tela1 {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .tela1 h1 {
+        margin-top: 10%;
+        text-align: justify;
+        font-size: 3.4vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela1 h3 {
+        font-size: 2.5vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 10%;
+    }
+
+    .tela1 textarea {
+        font-size: 2.5vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 98%;
+        height: 5vw;
+        padding: 0px;
+        padding-left: 10px;
+        padding-top: 13px;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .calcular {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 2.5vw;
+        color: #ffffff;
+        width: 100%;
+        height: 8vw;
+        margin-top: 10%;
+        border-radius: 100vh;
+    }
+
+    .tela2 {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .tela2 h1 {
+        margin-top: 10%;
+        text-align: justify;
+        font-size: 3.9vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela2 h5 {
+        margin-top: 5%;
+        font-size: 3.6vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela2 #resultado1 {
+        display: inline-block;
+        font-size: 3.6vw;
+        font-family: StatsBold;
+        color: #00E48B;
+    }
+
+    .tela2 #resultado2 {
+        display: inline-block;
+        font-size: 3.6vw;
+        font-family: StatsBold;
+        color: #00E48B;
+    }
+
+    canvas {
+        margin-top: 5%;
+    }
+
+    .botao-eixo {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #ffffff;
+        width: 100%;
+        height: 9vw;
+        margin-top: 10%;
+        border-radius: 100vh;
+    }
+
+    .desfazertd {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #ffffff;
+        width: 100%;
+        height: 9vw;
+        margin-top: 10%;
+        border-radius: 100vh;
+    }
+
+    .desfazer {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 3vw;
+        color: #ffffff;
+        width: 100%;
+        height: 9vw;
+        margin-top: 10%;
+        border-radius: 100vh;
+    }
+
+    rea-upload {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+        margin: 20px auto;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 700px;
+        position: relative;
+    }
+
+    .area-upload label.label-upload {
+        border: 2px dashed #00E48B;
+        min-height: 200px;
+        text-align: center;
+        margin: auto;
+        width: 70%;
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: #00E48B;
+        position: relative;
+        font-family: StatsBold;
+        -webkit-transition: .3s all;
+        -moz-transition: .3s all;
+        -o-transition: .3s all;
+        transition: .3s all;
+    }
+
+    .area-upload label.label-upload.highlight {
+        background-color: #fffdaa;
+    }
+
+    .area-upload label.label-upload * {
+        pointer-events: none;
+    }
+
+    .area-upload input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        -webkit-appearance: none;
+        opacity: 0;
+    }
+
+    .area-upload .lista-uploads .barra {
+        background-color: #e6e6e6;
+        margin: 10px 0;
+        width: 100%;
+        position: relative;
+    }
+
+    .area-upload .lista-uploads .barra .fill {
+        background-color: #a1f7ff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        min-width: 0;
+
+        -webkit-transition: .2s all;
+        -moz-transition: .2s all;
+        -o-transition: .2s all;
+        transition: .2s all;
+    }
+
+    .area-upload .lista-uploads .barra.complete .fill {
+        background-color: #bcffdf;
+    }
+
+    .area-upload .lista-uploads .barra .text {
+        z-index: 10;
+        text-align: center;
+        padding: 3px 5px;
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        color: black;
+        font-size: 12px;
+    }
+
+    .area-upload .lista-uploads .barra .text a {
+        color: black;
+        font-weight: bold;
+    }
+
+    .area-upload .lista-uploads .barra.error .fill {
+        background-color: #c02929;
+        color: white;
+        min-width: 100%;
+    }
+
+    .area-upload .lista-uploads .barra.error .text {
+        color: white;
+    }
+
+    .area-upload i {
+        font-size: 5vh;
+    }
+}
+
+@media (min-width: 1361px) {
+    .logo {
+        width: 10vw;
+        margin: auto;
+        margin-top: 4%;
+    }
+
+    .logo svg {
+        width: 100%;
+    }
+
+    .tela1 {
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+
+    .tela1 h1 {
+        margin-top: 3%;
+        text-align: justify;
+        font-family: StatsBold;
+        font-size: 2vw;
+        color: #101028;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tela1 h3 {
+        font-size: 1.5vw;
+        font-family: StatsBold;
+        color: #0F1028;
+        margin-top: 5%;
+    }
+
+    .entrada {
+        padding-left: 8.5vw;
+        padding-right: 8.5vw;
+    }
+
+    .tela1 textarea {
+        font-size: 1.3vw;
+        padding-top: 10px;
+        padding-left: 10px;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 2.2vw;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .tela1 select {
+        font-size: 1.3vw;
+        font-family: StatsRegular;
+        margin-top: 1%;
+        width: 100%;
+        height: 3.5vw;
+        padding: 0;
+        padding-left: 8px;
+        border: 2px solid #8C8D92;
+        color: #8C8D92;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+    }
+
+    .calcular {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1.3vw;
+        color: #ffffff;
+        width: 50%;
+        height: 4vw;
+        margin-top: 10%;
+        margin: auto;
+        border-radius: 100vh;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+
+    .tela2 {
+        padding-left: 19vw;
+        padding-right: 19vw;
+    }
+
+    .saida {
+        padding-left: 10.2vw;
+        padding-right: 10.2vw;
+    }
+
+    .tela2 h1 {
+        margin-top: 3%;
+        text-align: justify;
+        font-family: StatsBold;
+        font-size: 2vw;
+        color: #101028;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .tela2 h5 {
+        margin-top: 5%;
+        font-size: 2vw;
+        font-family: StatsBold;
+        color: #0F1028;
+    }
+
+    .tela2 #resultado1 {
+        display: inline-block;
+        font-size: 2vw;
+        font-family: StatsBold;
+        color: #00E48B;
+    }
+
+    .tela2 #resultado2 {
+        display: inline-block;
+        font-size: 2vw;
+        font-family: StatsBold;
+        color: #00E48B;
+    }
+
+    canvas {
+        margin-top: 5%;
+
+    }
+
+    .button2 {
+        margin-left: 17vh;
+    }
+
+    .botao-eixo {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1vw;
+        color: #ffffff;
+        width: 70%;
+        height: 4.5vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+
+    rea-upload {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+        margin: 20px auto;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 700px;
+        position: relative;
+    }
+
+    .area-upload label.label-upload {
+        border: 2px dashed #00E48B;
+        min-height: 200px;
+        text-align: center;
+        margin: auto;
+        width: 70%;
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: #00E48B;
+        position: relative;
+        font-family: StatsBold;
+        -webkit-transition: .3s all;
+        -moz-transition: .3s all;
+        -o-transition: .3s all;
+        transition: .3s all;
+    }
+
+    .area-upload label.label-upload.highlight {
+        background-color: #fffdaa;
+    }
+
+    .area-upload label.label-upload * {
+        pointer-events: none;
+    }
+
+    .area-upload input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        -webkit-appearance: none;
+        opacity: 0;
+    }
+
+    .area-upload .lista-uploads .barra {
+        background-color: #e6e6e6;
+        margin: 10px 0;
+        width: 100%;
+        position: relative;
+    }
+
+    .area-upload .lista-uploads .barra .fill {
+        background-color: #a1f7ff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        min-width: 0;
+
+        -webkit-transition: .2s all;
+        -moz-transition: .2s all;
+        -o-transition: .2s all;
+        transition: .2s all;
+    }
+
+    .area-upload .lista-uploads .barra.complete .fill {
+        background-color: #bcffdf;
+    }
+
+    .area-upload .lista-uploads .barra .text {
+        z-index: 10;
+        text-align: center;
+        padding: 3px 5px;
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        color: black;
+        font-size: 12px;
+    }
+
+    .area-upload .lista-uploads .barra .text a {
+        color: black;
+        font-weight: bold;
+    }
+
+    .area-upload .lista-uploads .barra.error .fill {
+        background-color: #c02929;
+        color: white;
+        min-width: 100%;
+    }
+
+    .area-upload .lista-uploads .barra.error .text {
+        color: white;
+    }
+
+    .area-upload i {
+        font-size: 5vh;
+    }
+
+    .desfazertd {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1vw;
+        color: #ffffff;
+        width: 70%;
+        height: 4.5vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+
+    .desfazer {
+        border: none;
+        background-color: #00E48B;
+        font-family: StatsBold;
+        font-size: 1vw;
+        color: #ffffff;
+        width: 70%;
+        height: 4.5vw;
+        margin-top: 5%;
+        border-radius: 100vh;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+}
